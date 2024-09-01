@@ -16,6 +16,6 @@ buffer spans over. If `<number>` is not provided, then the buffer view is
 extended on 2 windows by default.
 
 To quit the extended view mode, run `:ExtendedViewToggle` again or just close
-any extension windows.
+any window containing the extended view.
 
 Enjoy!

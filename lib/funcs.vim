@@ -15,6 +15,7 @@ export def ExtendedViewToggle(n: number = 2)
 
     # Original window setup
     original_win_id = win_getid()
+    saved_original_scrollbind = &scrollbind
 
     # Split windows depending on user input
     var last_win_id = original_win_id
@@ -39,17 +40,16 @@ export def ExtendedViewToggle(n: number = 2)
     # Handling windows close events
     # All the slave windows plus the original window
     var win_ids = join(add(keys(saved_slave_scrollbind), original_win_id), ',')
-    exe $'autocmd! WinClosed {win_ids} ++once Teardown()'
+    exe $'autocmd! WinClosed {win_ids} ++once Teardown(true)'
   else
-    Teardown()
+    Teardown(false)
   endif
 enddef
 
-def Teardown()
+def Teardown(from_autocmd: bool)
     # If the original window is closed, reopen a copy
-    if win_getid() == original_win_id
+    if win_getid() == original_win_id && from_autocmd
       vertical split
-      &scrollbind = false
     endif
 
     # Close slave windows

@@ -1,12 +1,13 @@
 # vim-extended-view
 
-Extend the view of your long buffer on other windows!
+Extend the view of your buffer on a number of side-by-side windows!
 
-This plugin provides only one command `:ExtendViewToggle <number>` that
-extends your buffer view `<number>` of side-by-side windows. If `<number>` is
-not provided, then the buffer view is extended on two windows by default.
+This plugin provides only one command `:ExtendViewToggle <number>`, where
+`<number>` is the number of the side-by-side windows where the current buffer
+spans over. If `<number>` is not provided, then the buffer view is extended on
+2 windows by default.
 
-To quit the extended view mode, either you run `:ExtendViewToggle <number>` or
-just close any extension windows.
+To quit the extended view mode, run `:ExtendViewToggle <number>` or just close
+any extension windows.
 
 Enjoy!

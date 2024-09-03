@@ -66,6 +66,7 @@ def Teardown(from_autocmd: bool)
     # If the origin window is closed, reopen a copy
     if win_getid() == origin_win_id && from_autocmd
       vertical split
+      &scrollbind = false
     endif
 
     # Close slave windows
@@ -86,4 +87,5 @@ def Teardown(from_autocmd: bool)
     saved_slave_scrollbind = {}
     origin_win_id = 0
     is_split_active = false
+    num_pages = 2
 enddef

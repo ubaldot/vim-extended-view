@@ -3,7 +3,7 @@
 Extend the view of your buffer on a number of side-by-side windows!
 
 <p align="center">
-<img src="/ExtendedView.mp4" width="75%" height="75%">
+<img src="/extended_view.gif" width="75%" height="75%">
 </p>
 
 <p align="center" style="font-size:38;">

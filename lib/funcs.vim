@@ -26,8 +26,10 @@ export def ExtendedViewToggle(n: number = 2)
       win_execute(last_win_id, '&winfixbuf = true')
     endif
     for ii in range(1, n - 1)
-      win_execute(last_win_id, 'vertical split')
-      last_win_id = win_getid(winnr('$'))
+      # TODO: this is a bit ugly but that is the way it is
+      vertical split
+      last_win_id = win_getid()
+      wincmd p
       saved_slave_scrollbind[string(last_win_id)] = &scrollbind
       win_execute(last_win_id, 'exe "normal! \<c-f>"')
       win_execute(last_win_id, 'exe "normal! \<c-e>"')

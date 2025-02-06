@@ -19,6 +19,7 @@ To quit the extended view mode, run `:ExtendedViewToggle` again or just close
 any window containing the extended view.
 
 If you don't have any mapping for `<c-f>` and `<c-b>`, then they are set to
-scroll `<number>` pages per time during the extended view. Handy!
+scroll `<number>` pages per time during the extended view. You will find it 
+very handy if you are a 80-columns person like me :)
 
 Enjoy!

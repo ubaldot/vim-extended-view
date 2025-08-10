@@ -14,10 +14,10 @@ if !has('vim9script') ||  v:version < 900
     finish
 endif
 
-if exists('g:vim_extended_view_loaded')
+if exists('g:loaded_vim_extended_view') && g:loaded_vim_extended_view
     finish
 endif
-g:vim_extended_view_loaded = true
+g:loaded_vim_extended_view = true
 
 
 import autoload "../lib/funcs.vim"

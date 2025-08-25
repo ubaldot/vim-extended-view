@@ -1,4 +1,4 @@
-vim9script noclear
+vim9script
 
 # Extend your buffer content to another window!
 # Maintainer:	Ubaldo Tiberi

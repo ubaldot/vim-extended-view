@@ -14,9 +14,6 @@ if !has('vim9script') ||  v:version < 900
     finish
 endif
 
-if exists('g:loaded_vim_extended_view') && g:loaded_vim_extended_view
-    finish
-endif
 g:loaded_vim_extended_view = true
 
 
